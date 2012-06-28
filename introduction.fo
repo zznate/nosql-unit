@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format" font-family="serif,Symbol,ZapfDingbats" font-size="10pt" text-align="justify" line-height="normal" font-selection-strategy="character-by-character" line-height-shift-adjustment="disregard-shifts" writing-mode="lr-tb" language="en"><fo:layout-master-set><fo:simple-page-master master-name="blank" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body display-align="center" margin-bottom="0.5in" margin-top="0.5in" region-name="blank-body"/><fo:region-before region-name="xsl-region-before-blank" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-blank" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="titlepage-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="lot-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="front-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="body-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="back-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="1"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-first" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-first" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-first" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-odd" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-odd" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-odd" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:simple-page-master master-name="index-even" page-width="8.5in" page-height="11in" margin-top="0.5in" margin-bottom="0.5in" margin-left="1in" margin-right="1in"><fo:region-body margin-bottom="0.5in" margin-top="0.5in" column-gap="12pt" column-count="2"/><fo:region-before region-name="xsl-region-before-even" extent="0.4in" display-align="before"/><fo:region-after region-name="xsl-region-after-even" extent="0.4in" display-align="after"/></fo:simple-page-master><fo:page-sequence-master master-name="titlepage"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="titlepage-first" page-position="first"/><fo:conditional-page-master-reference master-reference="titlepage-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="titlepage-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="lot"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="lot-first" page-position="first"/><fo:conditional-page-master-reference master-reference="lot-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="lot-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="front"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="front-first" page-position="first"/><fo:conditional-page-master-reference master-reference="front-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="front-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="body"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="body-first" page-position="first"/><fo:conditional-page-master-reference master-reference="body-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="body-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="back"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="back-first" page-position="first"/><fo:conditional-page-master-reference master-reference="back-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="back-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master><fo:page-sequence-master master-name="index"><fo:repeatable-page-master-alternatives><fo:conditional-page-master-reference master-reference="blank" blank-or-not-blank="blank"/><fo:conditional-page-master-reference master-reference="index-first" page-position="first"/><fo:conditional-page-master-reference master-reference="index-odd" odd-or-even="odd"/><fo:conditional-page-master-reference odd-or-even="even" master-reference="index-odd"/></fo:repeatable-page-master-alternatives></fo:page-sequence-master></fo:layout-master-set><fo:page-sequence xmlns:axf="http://www.antennahouse.com/names/XSL/Extensions" hyphenate="true" master-reference="body" language="en" format="1" initial-page-number="auto" force-page-count="no-force" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2"><fo:static-content flow-name="xsl-region-before-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>NoSQLUnit Core</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block>NoSQLUnit Core</fo:block></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-before-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-bottom-width="0.5pt" border-bottom-style="solid" border-bottom-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="right" display-align="before" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-footnote-separator"><fo:block><fo:leader color="black" leader-pattern="rule" leader-length="1in"/></fo:block></fo:static-content><fo:static-content flow-name="blank-body"><fo:block text-align="center"/></fo:static-content><fo:static-content flow-name="xsl-region-after-first"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-odd"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-even"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:static-content flow-name="xsl-region-after-blank"><fo:block font-family="serif,Symbol,ZapfDingbats" margin-left="0pt"><fo:table table-layout="fixed" width="100%" border-top-width="0.5pt" border-top-style="solid" border-top-color="black"><fo:table-column column-number="1" column-width="proportional-column-width(1)"/><fo:table-column column-number="2" column-width="proportional-column-width(1)"/><fo:table-column column-number="3" column-width="proportional-column-width(1)"/><fo:table-body><fo:table-row block-progression-dimension.minimum="14pt"><fo:table-cell text-align="start" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell><fo:table-cell text-align="center" display-align="after" relative-align="baseline"><fo:block><fo:block><fo:page-number/></fo:block></fo:block></fo:table-cell><fo:table-cell text-align="end" display-align="after" relative-align="baseline"><fo:block><fo:block/></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:block></fo:static-content><fo:flow flow-name="xsl-region-body" start-indent="4pc" end-indent="0pt"><fo:block id="introduction"><fo:block font-family="sans-serif,Symbol,ZapfDingbats"><fo:block margin-left="0pt"><fo:block font-size="24.8832pt" font-weight="bold"><fo:block keep-with-next.within-column="always" space-before.optimum="10pt" space-before.minimum="10pt * 0.8" space-before.maximum="10pt * 1.2" hyphenate="false" text-align="start" start-indent="0pt" hyphenation-character="-" hyphenation-push-character-count="2" hyphenation-remain-character-count="2">Chapter 1. NoSQLUnit Core</fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" id="toc...introduction"><fo:block><fo:block><fo:block space-before.minimum="1em" space-before.optimum="1.5em" space-before.maximum="2em" space-after="0.5em" margin-left="0pt" start-indent="0pt" font-size="17.28pt" font-weight="bold" font-family="sans-serif,Symbol,ZapfDingbats">Table of Contents</fo:block></fo:block></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d112e4">Overview</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d112e4"><fo:page-number-citation ref-id="d112e4"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d112e80">Requirements</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d112e80"><fo:page-number-citation ref-id="d112e80"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d112e105">NoSQLUnit</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d112e105"><fo:page-number-citation ref-id="d112e105"/></fo:basic-link></fo:inline></fo:block><fo:block id="toc.introduction.d112e105" margin-left="24pt"><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d112e164">Seeding Database</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d112e164"><fo:page-number-citation ref-id="d112e164"/></fo:basic-link></fo:inline></fo:block><fo:block text-align-last="justify" text-align="start" end-indent="24pt" last-line-end-indent="-24pt"><fo:inline keep-with-next.within-line="always"><fo:basic-link internal-destination="d112e259">Verifying Database</fo:basic-link></fo:inline><fo:inline keep-together.within-line="always"> <fo:leader leader-pattern="dots" leader-pattern-width="3pt" leader-alignment="reference-area" keep-with-next.within-line="always"/> <fo:basic-link internal-destination="d112e259"><fo:page-number-citation ref-id="d112e259"/></fo:basic-link></fo:inline></fo:block></fo:block></fo:block><fo:block id="d112e4"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Overview</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">Overview</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:external-graphic src="url(fig/nosqlunitlogo.png)" width="auto" height="auto" content-width="auto" content-height="auto"/><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Unit testing is a method by which the smallest testable part of an
+			application is validated. Unit tests must follow the
+			FIRST
+			Rules; these are Fast, Isolated, Repeatable,
+			Self-Validated and
+			Timely.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			It is strange to think about a
+			JEE
+			application
+			without persistence layer (typical Relational databases or
+			new
+			<fo:inline font-style="italic">NoSQL</fo:inline>
+			databases) so should be interesting to write
+			unit tests of persistence
+			layer too. When we are writing unit tests of
+			persistence layer we
+			should focus on to not break two main concepts
+			of
+			FIRST
+			rules, the fast and the isolated ones.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Our tests will be
+			<fo:inline font-style="italic">fast</fo:inline>
+			if they don't access
+			network nor filesystem, and in case of
+			persistence systems network and
+			filesystem are the most used
+			resources. In case of
+			RDBMS
+			(
+			<fo:inline font-style="italic">SQL</fo:inline>
+			), many Java in-memory
+			databases exist like
+			Apache Derby
+			,
+			H2
+			or
+			HSQLDB
+			. These
+			databases, as their name suggests are embedded into your
+			program and data
+			are stored in memory, so your tests are still fast.
+			The problem is with
+			<fo:inline font-style="italic">NoSQL</fo:inline>
+			systems, because of their heterogeneity. Some
+			systems work using
+			Document approach (like
+			MongoDb
+			), other ones Column (like
+			Hbase
+			), or Graph (like
+			Neo4J
+			). For this reason the in-memory mode
+			should be provided by the
+			vendor, there is no a generic solution.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Our tests must be isolated from themselves. It is not acceptable
+			that
+			one test method modifies the result of another test method. In case
+			of persistence tests this scenario occurs when previous test method
+			insert
+			an entry to database and next test method execution finds the
+			change.
+			So
+			before execution of each test, database should be found in a
+			known state.
+			Note that if your test found database in a known state,
+			test will be
+			repeatable, if test assertion depends on previous test
+			execution, each
+			execution will be unique. For homogeneous systems like
+			RDBMS
+			,
+			<fo:inline font-style="italic">DBUnit</fo:inline>
+			exists to maintain
+			database in a known state before each execution.
+			But there is no like
+			<fo:inline font-style="italic">DBUnit</fo:inline>
+			framework for heterogeneous
+			<fo:inline font-style="italic">NoSQL</fo:inline>
+			systems.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			resolves this problem by
+			providing a
+			<fo:inline font-style="italic">JUnit</fo:inline>
+			extension which helps us to manage
+			lifecycle of NoSQL systems and also
+			take care of maintaining databases
+			into known state.
+		</fo:block></fo:block><fo:block id="d112e80"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Requirements</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">Requirements</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			To run
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			,
+			<fo:inline font-style="italic">JUnit
+				4.10
+			</fo:inline>
+			or later must be provided. This is because of
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			is using
+			<fo:inline font-style="italic">Rules</fo:inline>
+			, and
+			they have changed from previous versions to 4.10.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Although it should work with
+			JDK 5
+			, jars are
+			compiled using
+			JDK 6
+			.
+		</fo:block></fo:block><fo:block id="d112e105"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">NoSQLUnit</fo:marker><fo:block font-size="20.735999999999997pt" border-top="0.5pt solid black" border-bottom="0.5pt solid black" padding-top="6pt" padding-bottom="3pt">NoSQLUnit</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+			is a
+			<fo:inline font-style="italic">JUnit</fo:inline>
+			extension to make writing unit and integration
+			tests of systems that
+			use NoSQL backend easier and is composed by two sets
+			of
+			<fo:inline font-style="italic">Rules</fo:inline>
+			and a group of annotations.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			First set of
+			<fo:inline font-style="italic">Rules</fo:inline>
+			are those responsible of
+			managing database lifecycle; there are two
+			for each supported
+			backend.
+		</fo:block><fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d112e124"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e125"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+					The first one (in case it is possible) it is the
+					<fo:inline font-weight="bold">in-memory</fo:inline>
+					mode. This mode takes care of
+					starting and stopping database system
+					in
+					"
+					<fo:inline font-style="italic">in-memory</fo:inline>
+					" mode. This mode will be typically
+					used during unit testing
+					execution.
+				</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e134"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+					The second one is the
+					<fo:inline font-weight="bold">managed</fo:inline>
+					mode. This mode is in charge of starting
+					<fo:inline font-style="italic">NoSQL</fo:inline>
+					server but as remote process (in local machine) and stopping it.
+					This
+					will typically used during integration testing execution.
+				</fo:block></fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Second set of
+			<fo:inline font-style="italic">Rules</fo:inline>
+			are those responsible of
+			maintaining database into known state. Each
+			supported backend will have
+			its own, and can be understood as a
+			connection to defined database which
+			will be used to execute the
+			required operations for maintaining the
+			stability of the system.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Note that because
+			<fo:inline font-style="italic">NoSQL</fo:inline>
+			databases are
+			heterogeneous, each system will require its own
+			implementation.
+		</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			And finally two annotations are provided,
+			<fo:basic-link internal-destination="seeding_database"><fo:inline>@UsingDataSet</fo:inline></fo:basic-link>
+			and
+			<fo:basic-link internal-destination="verifying_database"><fo:inline>@ShouldMatchDataSet</fo:inline></fo:basic-link>
+			, (thank you so
+			much
+			<fo:inline font-style="italic">Arquillian</fo:inline>
+			people for the name).
+		</fo:block><fo:block id="d112e164"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Seeding Database</fo:marker><fo:block font-size="17.28pt">Seeding Database</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				@UsingDataSet is used to seed database with defined data set. In
+				brief data sets are files that contain all data to be inserted to
+				configured database. In order to seed your database, use
+				<fo:inline font-style="italic">@UsingDataSet</fo:inline>
+				annotation, you can define it either
+				on the test itself or on the
+				class level. If there is definition on
+				both, test level annotation
+				takes precedence. This annotation has
+				two
+				attributes
+				<fo:inline font-family="monospace">locations</fo:inline>
+				and
+				<fo:inline font-family="monospace">loadStrategy</fo:inline>
+				.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				With
+				<fo:inline font-family="monospace">locations</fo:inline>
+				attribute you can specify
+				<fo:inline font-weight="bold">classpath</fo:inline>
+				datasets location. Locations
+				are relative to test class location.
+				Note that more than one dataset
+				can
+				be specified. 
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			Also <fo:inline font-family="monospace">withSelectiveLocations</fo:inline> attribute can be used to specify datasets location. See <fo:inline>Advanced Usage</fo:inline> chapter for more information.
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				If files are not
+				specified explicitly, next strategy is
+				applied:
+			</fo:block><fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d112e196"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e197"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+						First searches for a file on classpath in same package of test
+						class with next file name,
+						<fo:inline font-family="monospace">[test class name]#[test method
+							name].[format]
+						</fo:inline>
+						(only if annotation is present at test
+						method).
+					</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e203"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+						If first rule is not met or annotation is defined at class
+						scope,
+						next file is searched on classpath in same package of test
+						class,
+						<fo:inline font-family="monospace">[test class name].[default format]</fo:inline>
+						.
+					</fo:block></fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d112e209"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					datasets must reside into
+					<fo:inline font-style="italic">classpath</fo:inline>
+					and
+					format depends on
+					<fo:inline font-style="italic">NoSQL</fo:inline>
+					vendor.
+				</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">Second attribute provides strategies for inserting data.
+				Implemented strategies are:
+			</fo:block><fo:block xmlns:rx="http://www.renderx.com/XSL/Extensions" space-before.minimum="0.5em" space-before.optimum="1em" space-before.maximum="2em" space-after.minimum="0.5em" space-after.optimum="1em" space-after.maximum="2em" keep-together.within-column="auto" id="d112e220"><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" font-weight="bold" font-size="12pt" hyphenate="false" space-after.minimum="0.4em" space-after.optimum="0.6em" space-after.maximum="0.8em" keep-with-next.within-column="always">Table 1.1. Load Strategies</fo:block><fo:table border-before-width.conditionality="retain" border-collapse="collapse" width="auto" border-start-style="solid" border-end-style="solid" border-top-style="solid" border-bottom-style="solid" border-start-width="0.5pt" border-end-width="0.5pt" border-top-width="0.5pt" border-bottom-width="0.5pt" border-start-color="black" border-end-color="black" border-top-color="black" border-bottom-color="black"><fo:table-body start-indent="0pt" end-indent="0pt"><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>INSERT</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Insert defined datasets before executing any test method.</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>DELETE_ALL</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Deletes all elements of database before executing any test
+						method.
+					</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>CLEAN_INSERT</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>This is the most used strategy. It deletes all elements of
+						database and then insert defined datasets before executing any
+						test
+						method.
+					</fo:block></fo:table-cell>
+				</fo:table-row><fo:table-row>
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>REFRESH</fo:block></fo:table-cell>
+
+					<fo:table-cell padding-start="2pt" padding-end="2pt" padding-top="2pt" padding-bottom="2pt" border="0.5pt solid black"><fo:block>Insert all data defined in datasets that are not present on
+						database.
+					</fo:block></fo:table-cell>
+				</fo:table-row></fo:table-body></fo:table></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">An example of usage:</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d112e257">@UsingDataSet(locations=<fo:inline font-weight="bold" font-style="italic">"my_data_set.json"</fo:inline>, loadStrategy=LoadStrategyEnum.REFRESH)</fo:block></fo:block><fo:block id="d112e259"><fo:block><fo:block><fo:block keep-together.within-column="always" margin-left="0pt" font-family="sans-serif,Symbol,ZapfDingbats"><fo:block keep-with-next.within-column="always"><fo:block font-family="sans-serif" font-weight="bold" keep-with-next.within-column="always" space-before.minimum="0.8em" space-before.optimum="1.0em" space-before.maximum="1.2em" text-align="start" start-indent="0pt"><fo:marker marker-class-name="section.head.marker">Verifying Database</fo:marker><fo:block font-size="17.28pt">Verifying Database</fo:block></fo:block></fo:block></fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+				Sometimes it might imply a huge amount of work asserting database
+				state directly from testing code. By using
+				<fo:inline font-style="italic">@ShouldMatchDataSet</fo:inline>
+				on test method,
+				<fo:inline font-weight="bold">NoSQLUnit</fo:inline>
+				will check if database contains
+				expected entries after test
+				execution. As with
+				<fo:inline font-style="italic">@ShouldMatchDataSet</fo:inline>
+				annotation you can define
+				classpath file location, or using <fo:inline font-family="monospace">withSelectiveMatcher</fo:inline> See <fo:inline>Advanced Usage</fo:inline> chapter for more information. 
+			</fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+			If it is not dataset is supplied next convention is	used:
+			</fo:block><fo:list-block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" space-after.optimum="1em" space-after.minimum="0.8em" space-after.maximum="1.2em" provisional-label-separation="0.2em" provisional-distance-between-starts="1.0em" id="d112e281"><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e282"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+						First searches for a file on classpath in same package of test
+						class with next file name,
+						<fo:inline font-family="monospace">[test class name]#[test method
+							name]-expected.[format]
+						</fo:inline>
+						(only if annotation is present at
+						test method).
+					</fo:block></fo:block></fo:list-item-body></fo:list-item><fo:list-item space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em" id="d112e288"><fo:list-item-label end-indent="label-end()"><fo:block>•</fo:block></fo:list-item-label><fo:list-item-body start-indent="body-start()"><fo:block><fo:block>
+						If first rule is not met or annotation is defined at class
+						scope,
+						file is searched on classpath in same package of test class,
+						<fo:inline font-family="monospace">[test class name]-expected.[default format]</fo:inline>
+						.
+					</fo:block></fo:block></fo:list-item-body></fo:list-item></fo:list-block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" margin-left="0.25in" margin-right="0.25in" id="d112e294"><fo:block font-size="14pt" font-weight="bold" hyphenate="false" keep-with-next.within-column="always">Warning</fo:block><fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">
+					datasets must reside into
+					<fo:inline font-style="italic">classpath</fo:inline>
+					and
+					format depends on
+					<fo:inline font-style="italic">NoSQL</fo:inline>
+					vendor.
+				</fo:block></fo:block></fo:block><fo:block space-before.optimum="1em" space-before.minimum="0.8em" space-before.maximum="1.2em">An example of usage:</fo:block><fo:block space-before.minimum="0.8em" space-before.optimum="1em" space-before.maximum="1.2em" space-after.minimum="0.8em" space-after.optimum="1em" space-after.maximum="1.2em" hyphenate="false" wrap-option="no-wrap" white-space-collapse="false" white-space-treatment="preserve" linefeed-treatment="preserve" text-align="start" font-family="monospace" id="d112e305">@ShouldMatchDataSet(location=<fo:inline font-weight="bold" font-style="italic">"my_expected_data_set.json"</fo:inline>)</fo:block></fo:block></fo:block></fo:flow></fo:page-sequence></fo:root>

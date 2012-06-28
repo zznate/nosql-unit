@@ -1,0 +1,86 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;Advanced Usage</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;Advanced Usage"><div class="titlepage"><div><div><h2 class="title"><a name="advanced"></a>Chapter&nbsp;1.&nbsp;Advanced Usage</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d196e4">Simultaneous engines</a></span></dt><dt><span class="section"><a href="#d196e96">Support for JSR-330</a></span></dt></dl></div><div class="section" title="Simultaneous engines"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d196e4"></a>Simultaneous engines</h2></div></div></div><p>
+			Sometimes applications will contain more than one
+			<span class="emphasis"><em>NoSQL</em></span>
+			engine,
+			for example some parts of your model will be expressed better
+			as a
+			graph (
+			<span class="application">Neo4J</span>
+			for example), but other parts will be more natural in a
+			column way
+			(for example using
+			<span class="application">Cassandra</span>
+			).
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			supports this
+			kind of scenarios by providing in integration tests a
+			way to not load
+			all datasets into one system, but choosing which
+			datasets are stored
+			in each backend.
+		</p><p>
+			For declaring more than one engine, you must give a name to each
+			database
+			<span class="emphasis"><em>Rule</em></span>
+			using
+			<code class="function">connectionIdentifier()</code>
+			method in configuration instance.
+		</p><div class="example"><a name="advanced.name-database"></a><p class="title"><b>Example&nbsp;1.1.&nbsp;Given a name database rule</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+                                        .databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);</pre></div></div><br class="example-break"><p>
+		And also you need to provide an identified dataset for each engine, by using <code class="function">withSelectiveLocations</code> attribute of <code class="function">@UsingDataSet</code> annotation. You must set up the pair "named connection" / datasets.  
+		</p><div class="example"><a name="advanced.dataset-selective"></a><p class="title"><b>Example&nbsp;1.2.&nbsp;Selective dataset example</b></p><div class="example-contents"><pre class="programlisting">@UsingDataSet(withSelectiveLocations =												 
+				{ <em><span class="hl-annotation" style="color: gray">@Selective(identifier = "one", locations = "test3")</span></em> }, 
+			loadStrategy = LoadStrategyEnum.REFRESH)</pre></div></div><br class="example-break"><p>In <a class="link" href="#advanced.dataset-selective" title="Example&nbsp;1.2.&nbsp;Selective dataset example">example</a> we are refreshing database declared on <a class="link" href="#advanced.name-database" title="Example&nbsp;1.1.&nbsp;Given a name database rule">previous example</a> with data located at <span class="emphasis"><em>test3</em></span> file. 
+		</p><p>
+		Also works in expectations annotation:
+		</p><div class="example"><a name="advanced.expected-dataset-selective"></a><p class="title"><b>Example&nbsp;1.3.&nbsp;Selective expectation example</b></p><div class="example-contents"><pre class="programlisting">@ShouldMatchDataSet(withSelectiveMatcher = 
+				{ <em><span class="hl-annotation" style="color: gray">@SelectiveMatcher(identifier = "one", location = "test3")</span></em> 
+				})</pre></div></div><br class="example-break"><p>
+		When you use more than one engine at a time you should take under consideration next rules:
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem">
+				If location attribute is set, it will use it and will ignore <code class="function">withSelectiveMatcher</code> attribute data. Location data is populated through all registered systems.
+			</li><li class="listitem">
+				If location is not set, then system tries to insert data defined in <code class="function">withSelectiveMatcher</code> attribute to each backend.
+			</li><li class="listitem">
+				If <code class="function">withSelectiveMatcher</code> attribute is not set, then default strategy (explained in <a class="link" href="#">section</a>) is taken. Note that default strategy will replicate all datasets to defined engines.
+			</li></ul></div><p>
+			You can also use the same approach for inserting data into same engine but in different databases. If you have one <span class="application">MongoDb</span> instance with two databases, you can also write tests for both databases at one time. For example:
+		</p><div class="example"><a name="advanced.multiple-mongodb"></a><p class="title"><b>Example&nbsp;1.4.&nbsp;Multiple connections example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule2 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test2"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"two"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Test</span></em>
+<em><span class="hl-annotation" style="color: gray">@UsingDataSet(withSelectiveLocations = {
+		@Selective(identifier = "one", locations = "json.test"),
+		@Selective(identifier = "two", locations = "json3.test") }, 
+	loadStrategy = LoadStrategyEnum.CLEAN_INSERT)</span></em>
+<strong class="hl-keyword">public</strong> <strong class="hl-keyword">void</strong> my_test() {...}
+</pre></div></div><br class="example-break"></div><div class="section" title="Support for JSR-330"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d196e96"></a>Support for JSR-330</h2></div></div></div><p><span class="bold"><strong>NoSQLUnit</strong></span> supports two annotations of <acronym class="acronym">JSR-330</acronym> aka Dependency Injection for Java. Concretely <code class="classname">@Inject</code> and <code class="classname">@Named</code> annotations.</p><p>During test execution you may need to access underlying class used to load and assert data to execute extra operations to backend. <span class="bold"><strong>NoSQLUnit</strong></span> will inspect <code class="classname">@Inject</code> annotations of test fields, and try to set own driver to attribute. For example in case of <span class="application">MongoDb</span>, <code class="classname">com.mongodb.Mongo</code> instance will be injected.</p><div class="example"><a name="advanced.injection"></a><p class="title"><b>Example&nbsp;1.5.&nbsp;Injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+						.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo;</pre></div></div><br class="example-break"><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>Note that in <a class="link" href="#advanced.injection" title="Example&nbsp;1.5.&nbsp;Injection example">example</a> we are setting <code class="varname">this</code> as second parameter to the Rule.</p></div><p>
+		But if you are using more than one engine at same time (see <a class="link" href="#advanced.simultaneous-engine-title">chapter</a>) you need a way to distinguish each connection. For fixing this problem, you must use <code class="classname">@Named</code> annotation by putting the identifier given in configuration instance. For example:
+		</p><div class="example"><a name="advanced.named-injection"></a><p class="title"><b>Example&nbsp;1.6.&nbsp;Named injection example</b></p><div class="example-contents"><pre class="programlisting"><em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule1 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"one"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Rule</span></em>
+<strong class="hl-keyword">public</strong> MongoDbRule remoteMongoDbRule2 = <strong class="hl-keyword">new</strong> MongoDbRule(mongoDb()
+					.databaseName(<strong class="hl-string"><em style="color:red">"test2"</em></strong>).connectionIdentifier(<strong class="hl-string"><em style="color:red">"two"</em></strong>).build() ,<strong class="hl-keyword">this</strong>);
+
+<em><span class="hl-annotation" style="color: gray">@Named("one")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo1;
+	
+<em><span class="hl-annotation" style="color: gray">@Named("two")</span></em>
+<em><span class="hl-annotation" style="color: gray">@Inject</span></em>
+<strong class="hl-keyword">private</strong> Mongo mongo2;</pre></div></div><br class="example-break"></div></div></body></html>

@@ -1,0 +1,292 @@
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+   <title>Chapter&nbsp;1.&nbsp;NoSQLUnit Core</title><link rel="stylesheet" type="text/css" href="stylesheet.css"><meta name="generator" content="DocBook XSL-NS Stylesheets V1.76.1"></head><body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF"><div class="chapter" title="Chapter&nbsp;1.&nbsp;NoSQLUnit Core"><div class="titlepage"><div><div><h2 class="title"><a name="introduction"></a>Chapter&nbsp;1.&nbsp;NoSQLUnit Core</h2></div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><span class="section"><a href="#d220e4">Overview</a></span></dt><dt><span class="section"><a href="#d220e80">Requirements</a></span></dt><dt><span class="section"><a href="#d220e105">NoSQLUnit</a></span></dt><dd><dl><dt><span class="section"><a href="#d220e164">Seeding Database</a></span></dt><dt><span class="section"><a href="#d220e259">Verifying Database</a></span></dt></dl></dd></dl></div><div class="section" title="Overview"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d220e4"></a>Overview</h2></div></div></div><span class="inlinemediaobject"><img src="fig/nosqlunitlogo.png"></span><p>
+			Unit testing is a method by which the smallest testable part of an
+			application is validated. Unit tests must follow the
+			<acronym class="acronym">FIRST</acronym>
+			Rules; these are Fast, Isolated, Repeatable,
+			Self-Validated and
+			Timely.
+		</p><p>
+			It is strange to think about a
+			<acronym class="acronym">JEE</acronym>
+			application
+			without persistence layer (typical Relational databases or
+			new
+			<span class="emphasis"><em>NoSQL</em></span>
+			databases) so should be interesting to write
+			unit tests of persistence
+			layer too. When we are writing unit tests of
+			persistence layer we
+			should focus on to not break two main concepts
+			of
+			<acronym class="acronym">FIRST</acronym>
+			rules, the fast and the isolated ones.
+		</p><p>
+			Our tests will be
+			<span class="emphasis"><em>fast</em></span>
+			if they don't access
+			network nor filesystem, and in case of
+			persistence systems network and
+			filesystem are the most used
+			resources. In case of
+			<acronym class="acronym">RDBMS</acronym>
+			(
+			<span class="emphasis"><em>SQL</em></span>
+			), many Java in-memory
+			databases exist like
+			<span class="application">Apache Derby</span>
+			,
+			<span class="application">H2</span>
+			or
+			<span class="application">HSQLDB</span>
+			. These
+			databases, as their name suggests are embedded into your
+			program and data
+			are stored in memory, so your tests are still fast.
+			The problem is with
+			<span class="emphasis"><em>NoSQL</em></span>
+			systems, because of their heterogeneity. Some
+			systems work using
+			Document approach (like
+			<span class="application">MongoDb</span>
+			), other ones Column (like
+			<span class="application">Hbase</span>
+			), or Graph (like
+			<span class="application">Neo4J</span>
+			). For this reason the in-memory mode
+			should be provided by the
+			vendor, there is no a generic solution.
+		</p><p>
+			Our tests must be isolated from themselves. It is not acceptable
+			that
+			one test method modifies the result of another test method. In case
+			of persistence tests this scenario occurs when previous test method
+			insert
+			an entry to database and next test method execution finds the
+			change.
+			So
+			before execution of each test, database should be found in a
+			known state.
+			Note that if your test found database in a known state,
+			test will be
+			repeatable, if test assertion depends on previous test
+			execution, each
+			execution will be unique. For homogeneous systems like
+			<acronym class="acronym">RDBMS</acronym>
+			,
+			<span class="emphasis"><em>DBUnit</em></span>
+			exists to maintain
+			database in a known state before each execution.
+			But there is no like
+			<span class="emphasis"><em>DBUnit</em></span>
+			framework for heterogeneous
+			<span class="emphasis"><em>NoSQL</em></span>
+			systems.
+		</p><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			resolves this problem by
+			providing a
+			<span class="emphasis"><em>JUnit</em></span>
+			extension which helps us to manage
+			lifecycle of NoSQL systems and also
+			take care of maintaining databases
+			into known state.
+		</p></div><div class="section" title="Requirements"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d220e80"></a>Requirements</h2></div></div></div><p>
+			To run
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			,
+			<span class="emphasis"><em>JUnit
+				4.10
+			</em></span>
+			or later must be provided. This is because of
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			is using
+			<span class="emphasis"><em>Rules</em></span>
+			, and
+			they have changed from previous versions to 4.10.
+		</p><p>
+			Although it should work with
+			<acronym class="acronym">JDK 5</acronym>
+			, jars are
+			compiled using
+			<acronym class="acronym">JDK 6</acronym>
+			.
+		</p></div><div class="section" title="NoSQLUnit"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="d220e105"></a>NoSQLUnit</h2></div></div></div><p>
+			<span class="bold"><strong>NoSQLUnit</strong></span>
+			is a
+			<span class="emphasis"><em>JUnit</em></span>
+			extension to make writing unit and integration
+			tests of systems that
+			use NoSQL backend easier and is composed by two sets
+			of
+			<span class="emphasis"><em>Rules</em></span>
+			and a group of annotations.
+		</p><p>
+			First set of
+			<span class="emphasis"><em>Rules</em></span>
+			are those responsible of
+			managing database lifecycle; there are two
+			for each supported
+			backend.
+		</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+					The first one (in case it is possible) it is the
+					<span class="bold"><strong>in-memory</strong></span>
+					mode. This mode takes care of
+					starting and stopping database system
+					in
+					"
+					<span class="emphasis"><em>in-memory</em></span>
+					" mode. This mode will be typically
+					used during unit testing
+					execution.
+				</p></li><li class="listitem"><p>
+					The second one is the
+					<span class="bold"><strong>managed</strong></span>
+					mode. This mode is in charge of starting
+					<span class="emphasis"><em>NoSQL</em></span>
+					server but as remote process (in local machine) and stopping it.
+					This
+					will typically used during integration testing execution.
+				</p></li></ul></div><p>
+			Second set of
+			<span class="emphasis"><em>Rules</em></span>
+			are those responsible of
+			maintaining database into known state. Each
+			supported backend will have
+			its own, and can be understood as a
+			connection to defined database which
+			will be used to execute the
+			required operations for maintaining the
+			stability of the system.
+		</p><p>
+			Note that because
+			<span class="emphasis"><em>NoSQL</em></span>
+			databases are
+			heterogeneous, each system will require its own
+			implementation.
+		</p><p>
+			And finally two annotations are provided,
+			<a class="link" href="#seeding_database">@UsingDataSet</a>
+			and
+			<a class="link" href="#verifying_database">@ShouldMatchDataSet</a>
+			, (thank you so
+			much
+			<span class="emphasis"><em>Arquillian</em></span>
+			people for the name).
+		</p><div class="section" title="Seeding Database"><div class="titlepage"><div><div><h3 class="title"><a name="d220e164"></a>Seeding Database</h3></div></div></div><p>
+				@UsingDataSet is used to seed database with defined data set. In
+				brief data sets are files that contain all data to be inserted to
+				configured database. In order to seed your database, use
+				<span class="emphasis"><em>@UsingDataSet</em></span>
+				annotation, you can define it either
+				on the test itself or on the
+				class level. If there is definition on
+				both, test level annotation
+				takes precedence. This annotation has
+				two
+				attributes
+				<code class="methodname">locations</code>
+				and
+				<code class="methodname">loadStrategy</code>
+				.
+			</p><p>
+				With
+				<code class="methodname">locations</code>
+				attribute you can specify
+				<span class="bold"><strong>classpath</strong></span>
+				datasets location. Locations
+				are relative to test class location.
+				Note that more than one dataset
+				can
+				be specified. 
+			</p><p>
+			Also <code class="methodname">withSelectiveLocations</code> attribute can be used to specify datasets location. See <a class="link" href="#">Advanced Usage</a> chapter for more information.
+			</p><p>
+				If files are not
+				specified explicitly, next strategy is
+				applied:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+						First searches for a file on classpath in same package of test
+						class with next file name,
+						<code class="filename">[test class name]#[test method
+							name].[format]
+						</code>
+						(only if annotation is present at test
+						method).
+					</p></li><li class="listitem"><p>
+						If first rule is not met or annotation is defined at class
+						scope,
+						next file is searched on classpath in same package of test
+						class,
+						<code class="filename">[test class name].[default format]</code>
+						.
+					</p></li></ul></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+					datasets must reside into
+					<span class="emphasis"><em>classpath</em></span>
+					and
+					format depends on
+					<span class="emphasis"><em>NoSQL</em></span>
+					vendor.
+				</p></div><p>Second attribute provides strategies for inserting data.
+				Implemented strategies are:
+			</p><table border="1" id="d220e220"><caption>Table&nbsp;1.1.&nbsp;Load Strategies</caption><tr>
+					<td>INSERT</td>
+
+					<td>Insert defined datasets before executing any test method.</td>
+				</tr><tr>
+					<td>DELETE_ALL</td>
+
+					<td>Deletes all elements of database before executing any test
+						method.
+					</td>
+				</tr><tr>
+					<td>CLEAN_INSERT</td>
+
+					<td>This is the most used strategy. It deletes all elements of
+						database and then insert defined datasets before executing any
+						test
+						method.
+					</td>
+				</tr><tr>
+					<td>REFRESH</td>
+
+					<td>Insert all data defined in datasets that are not present on
+						database.
+					</td>
+				</tr></table><p>An example of usage:</p><pre class="programlisting">@UsingDataSet(locations=<strong class="hl-string"><em style="color:red">"my_data_set.json"</em></strong>, loadStrategy=LoadStrategyEnum.REFRESH)</pre></div><div class="section" title="Verifying Database"><div class="titlepage"><div><div><h3 class="title"><a name="d220e259"></a>Verifying Database</h3></div></div></div><p>
+				Sometimes it might imply a huge amount of work asserting database
+				state directly from testing code. By using
+				<span class="emphasis"><em>@ShouldMatchDataSet</em></span>
+				on test method,
+				<span class="bold"><strong>NoSQLUnit</strong></span>
+				will check if database contains
+				expected entries after test
+				execution. As with
+				<span class="emphasis"><em>@ShouldMatchDataSet</em></span>
+				annotation you can define
+				classpath file location, or using <code class="methodname">withSelectiveMatcher</code> See <a class="link" href="#">Advanced Usage</a> chapter for more information. 
+			</p><p>
+			If it is not dataset is supplied next convention is	used:
+			</p><div class="itemizedlist"><ul class="itemizedlist" type="disc"><li class="listitem"><p>
+						First searches for a file on classpath in same package of test
+						class with next file name,
+						<code class="filename">[test class name]#[test method
+							name]-expected.[format]
+						</code>
+						(only if annotation is present at
+						test method).
+					</p></li><li class="listitem"><p>
+						If first rule is not met or annotation is defined at class
+						scope,
+						file is searched on classpath in same package of test class,
+						<code class="filename">[test class name]-expected.[default format]</code>
+						.
+					</p></li></ul></div><div class="warning" title="Warning" style="margin-left: 0.5in; margin-right: 0.5in;"><h3 class="title">Warning</h3><p>
+					datasets must reside into
+					<span class="emphasis"><em>classpath</em></span>
+					and
+					format depends on
+					<span class="emphasis"><em>NoSQL</em></span>
+					vendor.
+				</p></div><p>An example of usage:</p><pre class="programlisting">@ShouldMatchDataSet(location=<strong class="hl-string"><em style="color:red">"my_expected_data_set.json"</em></strong>)</pre></div></div></div></body></html>
